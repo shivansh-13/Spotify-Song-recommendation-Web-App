@@ -3,11 +3,13 @@
 
 // we've started you off with Express (https://expressjs.com/) and axios (https://www.npmjs.com/package/axios)
 // but feel free to use whatever libraries or frameworks you'd like through `package.json`.
+const dotenv = require("dotenv");
+const cors = require("cors");
 const express = require("express");
 const axios = require("axios");
 const { getAccessToken } = require("./spotify/auth");
 const { searchArtists, searchArtists2, searchArtists3, getRecommendations } = require("./spotify/actions");
-
+dotenv.config();
 const BASE_URL = "https://api.spotify.com/v1"
 
 // initialize an express instance called 'app' 
